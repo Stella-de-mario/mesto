@@ -1,94 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="author" content="Irina Otroshchenkova"/>
-  <title>Сервис Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css"/>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Irina Otroshchenkova" />
+    <title>Сервис Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
 
-<body>
-  <div class="page">
-    <header class="header">
-      <img src="./image/logo.svg" alt="Логотип Mesto" class="header__logo">
-    </header>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./image/logo.svg" alt="Логотип Mesto" class="header__logo" />
+      </header>
 
-    <main class="content">
-      <section class="profile">
-        <div class="profile__info">
-          <img src="./image/Jak.jpg" alt="Жак-Ив Кусто" class="profile__avatar">
-          <div class="profile__title">
-            <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button type="button" class="profile__edit-button"></button>
-            <p class="profile__profession">Исследователь океана</p>
-          </div> 
-        </div>
-        <button type="button" class="profile__add-button"></button>
-      </section>
-      <section class="elements">
-        <ul class="elements__album">
-          <li class="elements__element">
-            <img class="elements__image" src="./image/karachaev.png" alt="Древняя церковь.">
-            <div class="elements__caption">
-              <h2 class="elements__title">Карачаево-Черкессия</h2>
-              <button class="elements__heart"></button>
+      <main class="content">
+        <section class="profile">
+          <div class="profile__info">
+            <img
+              src="./image/Jak.jpg"
+              alt="Жак-Ив Кусто"
+              class="profile__avatar"
+            />
+            <div class="profile__title">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button type="button" class="profile__edit-button"></button>
+              <p class="profile__profession">Исследователь океана</p>
             </div>
-          </li>
-          <li class="elements__element">
-            <img class="elements__image" src="./image/elbrus.png" alt="Гора Эльбрус в дымке.">
-            <div class="elements__caption">
-              <h2 class="elements__title">Гора Эльбрус</h2>
-              <button class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__element">
-            <img class="elements__image" src="./image/dombai.png" alt="Лес на фоне гор Домбая.">
-            <div class="elements__caption">
-              <h2 class="elements__title">Домбай</h2>
-              <button class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__element">
-            <img class="elements__image" src="./image/kizhi.jpg" alt="Деревянные церкви.">
-            <div class="elements__caption">
-              <h2 class="elements__title">Кижи</h2>
-              <button class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__element">
-            <img class="elements__image" src="./image/bashkir-shikhany.jpg" alt="Горы на фоне неба.">
-            <div class="elements__caption">
-              <h2 class="elements__title">Шиханы Башкирии</h2>
-              <button class="elements__heart"></button>
-            </div>
-          </li>
-          <li class="elements__element">
-            <img class="elements__image" src="./image/dolina-gejzerov-na-kamchatke.jpg" alt="Гейзеры.">
-            <div class="elements__caption">
-              <h2 class="elements__title">Долина гейзеров на Камчатке
-                </h2>
-              <button class="elements__heart"></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <footer class="footer">
-      <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
-    </footer>
-  </div>
-  <div class="popup">
-    <div class="popup__container">
-      <button class="popup__close-button" type="button"></button>
-      <h3 class="popup__title">Редактировать профиль</h3>
-      <form class="popup__form">
-      <input type="text" class="popup__input-form" name="name">
-      <input type="text" class="popup__input-form" name="profession">
-      <button type="submit" class="popup__save-button">Сохранить</button>
-    </form>
+          </div>
+          <button type="button" class="profile__add-button"></button>
+        </section>
+        <section class="elements">
+          <ul class="elements__album">
+            <li class="elements__element">
+              <img
+                class="elements__image"
+                src="./image/karachaev.png"
+                alt="Древняя церковь."
+              />
+              <div class="elements__caption">
+                <h2 class="elements__title">Карачаево-Черкессия</h2>
+                <button class="elements__heart"></button>
+              </div>
+            </li>
+            <li class="elements__element">
+              <img
+                class="elements__image"
+                src="./image/elbrus.png"
+                alt="Гора Эльбрус в дымке."
+              />
+              <div class="elements__caption">
+                <h2 class="elements__title">Гора Эльбрус</h2>
+                <button class="elements__heart"></button>
+              </div>
+            </li>
+            <li class="elements__element">
+              <img
+                class="elements__image"
+                src="./image/dombai.png"
+                alt="Лес на фоне гор Домбая."
+              />
+              <div class="elements__caption">
+                <h2 class="elements__title">Домбай</h2>
+                <button class="elements__heart"></button>
+              </div>
+            </li>
+            <li class="elements__element">
+              <img
+                class="elements__image"
+                src="./image/kizhi.jpg"
+                alt="Деревянные церкви."
+              />
+              <div class="elements__caption">
+                <h2 class="elements__title">Кижи</h2>
+                <button class="elements__heart"></button>
+              </div>
+            </li>
+            <li class="elements__element">
+              <img
+                class="elements__image"
+                src="./image/bashkir-shikhany.jpg"
+                alt="Горы на фоне неба."
+              />
+              <div class="elements__caption">
+                <h2 class="elements__title">Шиханы Башкирии</h2>
+                <button class="elements__heart"></button>
+              </div>
+            </li>
+            <li class="elements__element">
+              <img
+                class="elements__image"
+                src="./image/dolina-gejzerov-na-kamchatke.jpg"
+                alt="Гейзеры."
+              />
+              <div class="elements__caption">
+                <h2 class="elements__title">Долина гейзеров на Камчатке</h2>
+                <button class="elements__heart"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+      </footer>
     </div>
-  </div> 
-  <script src="./scripts/index.js"></script>
-</body>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close-button" type="button"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form">
+          <input
+            type="text"
+            value="text"
+            id="user-name"
+            class="popup__input-form"
+            name="user-name"
+            placeholder="Имя"
+          />
+          <input
+            type="text"
+            value="text"
+            id="user-profession"
+            class="popup__input-form"
+            name="user-profession"
+            placeholder="Профессия"
+          />
+          <button type="submit" class="popup__save-button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
