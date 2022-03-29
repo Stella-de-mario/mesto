@@ -1,0 +1,19 @@
+.elements {
+    margin: 0 auto;
+    max-width: 880px;
+    padding-top: 49px;
+}
+
+@media screen and (max-width: 1023px) {
+  .elements {
+    margin: 0 70px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .elements {
+    padding-top: 37px;
+    margin: 0 19px;
+  }
+}
+
