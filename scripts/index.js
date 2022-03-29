@@ -9,13 +9,13 @@ let formElement = popupElement.querySelector('.popup__container');
 
 
 function openPopup() {
-  popupElement.classList.add('popup__opened');
+  popupElement.classList.add('popup_opened');
   nameInput.value = profileName.textContent;
   professionInput.value = profileProfession.textContent;
 }
 
 function closePopup() {
-  popupElement.classList.remove('popup__opened');
+  popupElement.classList.remove('popup_opened');
 }
 
 function formSubmitHandler (evt) {
