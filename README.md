@@ -13,4 +13,4 @@
 
 **GitHub Pages**
 
-* [Ссылка на макет в GitHub](https://stella-de-mario.github.io/mesto/)
+* [Ссылка на макет в GitHub]()
