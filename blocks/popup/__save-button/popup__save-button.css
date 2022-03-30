@@ -12,10 +12,10 @@
     text-align: center;
     border-radius: 2px;
     transition: opacity .2s linear;
+    cursor: pointer;
   }
   
 .popup__save-button:hover {
-    cursor: pointer;
     opacity: .8;
   }
 
