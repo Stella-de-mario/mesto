@@ -1,5 +1,5 @@
 let popupElement = document.querySelector(".popup");
-let editBtn = document.querySelector(".profile__edit-button");
+let editBtn = document.querySelector('.profile__edit-button');
 let closeBtn = popupElement.querySelector(".popup__close-button");
 let nameInput = popupElement.querySelector('input[name=name]');
 let professionInput = popupElement.querySelector('input[name=profession]');
