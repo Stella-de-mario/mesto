@@ -1,20 +1,17 @@
 let popupElement = document.querySelector(".popup");
 let editBtn = document.querySelector(".profile__edit-button");
 let closeBtn = popupElement.querySelector(".popup__close-button");
-let nameInput = popupElement.querySelector("#user-name");
-let professionInput = popupElement.querySelector("#user-profession");
+let nameInput = document.querySelector("#user-name");
+let professionInput = document.querySelector("#user-profession");
 let profileName = document.querySelector(".profile__name");
 let profileProfession = document.querySelector(".profile__profession");
-let formElement = popupElement.querySelector(".popup__container");
+// let formElement = popupElement.querySelector(".popup__container");
 
-function openPopup() {
+function togglePopup() {
   nameInput.value = profileName.textContent;
   professionInput.value = profileProfession.textContent;
-  popupElement.classList.add("popup_opened");
-}
 
-function closePopup() {
-  popupElement.classList.remove("popup_opened");
+  popupElement.classList.toggle("popup_opened");
 }
 
 function formSubmitHandler(evt) {
@@ -23,11 +20,11 @@ function formSubmitHandler(evt) {
   profileName.textContent = nameInput.value;
   profileProfession.textContent = professionInput.value;
 
-  closePopup();
+  togglePopup();
 }
 
-editBtn.addEventListener("click", openPopup);
+editBtn.addEventListener("click", togglePopup);
 
-closeBtn.addEventListener("click", closePopup);
+closeBtn.addEventListener("click", togglePopup);
 
 formElement.addEventListener("submit", formSubmitHandler);
