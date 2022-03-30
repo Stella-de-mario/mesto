@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Irina Otroshchenkova" />
-    <title>Сервис Mesto</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./pages/index.css" />
+    <title>Сервис Mesto</title>
   </head>
 
   <body>
@@ -24,12 +24,13 @@
             />
             <div class="profile__title">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button type="button" class="profile__edit-button"></button>
+              <button type="button" class="profile__edit-button" aria-label="Изменить"></button>
               <p class="profile__profession">Исследователь океана</p>
             </div>
           </div>
-          <button type="button" class="profile__add-button"></button>
+          <button type="button" class="profile__add-button" aria-label="Добавить"></button>
         </section>
+
         <section class="elements">
           <ul class="elements__album">
             <li class="elements__element">
@@ -40,7 +41,7 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Карачаево-Черкессия</h2>
-                <button class="elements__heart"></button>
+                <button class="elements__heart" aria-label="Нравится"></button>
               </div>
             </li>
             <li class="elements__element">
@@ -51,7 +52,7 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Гора Эльбрус</h2>
-                <button class="elements__heart"></button>
+                <button class="elements__heart" aria-label="Нравится"></button>
               </div>
             </li>
             <li class="elements__element">
@@ -62,7 +63,7 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Домбай</h2>
-                <button class="elements__heart"></button>
+                <button class="elements__heart" aria-label="Нравится"></button>
               </div>
             </li>
             <li class="elements__element">
@@ -73,7 +74,7 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Кижи</h2>
-                <button class="elements__heart"></button>
+                <button class="elements__heart" aria-label="Нравится"></button>
               </div>
             </li>
             <li class="elements__element">
@@ -84,7 +85,7 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Шиханы Башкирии</h2>
-                <button class="elements__heart"></button>
+                <button class="elements__heart" aria-label="Нравится"></button>
               </div>
             </li>
             <li class="elements__element">
@@ -95,28 +96,29 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Долина гейзеров на Камчатке</h2>
-                <button class="elements__heart"></button>
+                <button class="elements__heart" aria-label="Нравится"></button>
               </div>
             </li>
           </ul>
         </section>
       </main>
+
       <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
       </footer>
-    </div>
+    
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__close-button" type="button"></button>
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <form class="popup__form">
+        <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__form" name="editprofile">
           <input
             type="text"
             value="text"
             id="user-name"
             class="popup__input-form"
             name="user-name"
-            placeholder="Имя"
+            required placeholder="Имя"
           />
           <input
             type="text"
@@ -124,12 +126,15 @@
             id="user-profession"
             class="popup__input-form"
             name="user-profession"
-            placeholder="Профессия"
+            required placeholder="Профессия"
           />
-          <button type="submit" class="popup__save-button">Сохранить</button>
+          <button type="submit" class="popup__save-button" aria-label="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>
-    <script src="./scripts/index.js"></script>
+
+  </div>
+
+  <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -12,15 +12,17 @@
   @media screen and (max-width: 967px) {
     .profile__profession {
       text-align: center;
+      padding-left: 42px;
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 640px) {
     .profile__profession {
       font-size: 14px;
       line-height: 1.2;
       max-width: 330px;
       text-align: center;
+      padding-left: 25px;
     }
   }
   

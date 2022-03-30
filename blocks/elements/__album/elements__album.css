@@ -2,8 +2,10 @@
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(282px, max-content));
+    justify-items: center;
+    justify-content: center;
     row-gap: 20px;
     column-gap: 17px;
   }

@@ -9,12 +9,19 @@
     overflow: hidden;
   }
 
+  @media screen and (max-width: 976px) {
+    .profile__name {
+      padding-left: 42px;
+    }
+  }
+
   @media screen and (max-width: 625px) {
     .profile__name {
       max-width: 295px;
       font-size: 27px;
       line-height: 1.22;
       text-align: center;
+      padding-left: 25px;
     }
   }
 
