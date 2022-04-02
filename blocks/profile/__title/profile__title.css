@@ -5,19 +5,19 @@
   align-content: center;
   column-gap: 19px;
   row-gap: 9px;
-  }
-  
-  @media screen and (max-width: 967px) {
-    .profile__title {
-      text-align: center;
-      justify-items: center;
-    }
-  }
+}
 
-  @media screen and (max-width: 320px) {
+@media screen and (max-width: 967px) {
   .profile__title {
-      row-gap: 7px;
-      column-gap: 11px;
-      align-items: center;
+    text-align: center;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__title {
+    row-gap: 7px;
+    column-gap: 11px;
+    align-items: center;
   }
 }

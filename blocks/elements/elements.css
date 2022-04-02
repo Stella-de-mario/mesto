@@ -1,7 +1,7 @@
 .elements {
-    margin: 0 auto;
-    max-width: 880px;
-    padding-top: 49px;
+  margin: 0 auto;
+  max-width: 880px;
+  padding-top: 49px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -16,4 +16,3 @@
     margin: 0 19px;
   }
 }
-

@@ -5,7 +5,7 @@ let nameInput = popupElement.querySelector("input[name=name]");
 let professionInput = popupElement.querySelector("input[name=profession]");
 let profileName = document.querySelector(".profile__name");
 let profileProfession = document.querySelector(".profile__profession");
-let formElement = popupElement.querySelector(".popup__container");
+let formElement = popupElement.querySelector(".popup__form");
 
 function togglePopup() {
   nameInput.value = profileName.textContent;

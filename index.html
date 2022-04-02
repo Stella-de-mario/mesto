@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Сервис Mesto</title>
   </head>
@@ -24,11 +24,19 @@
             />
             <div class="profile__title">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button type="button" class="profile__edit-button" aria-label="Изменить"></button>
+              <button
+                type="button"
+                class="profile__edit-button"
+                aria-label="Изменить"
+              ></button>
               <p class="profile__profession">Исследователь океана</p>
             </div>
           </div>
-          <button type="button" class="profile__add-button" aria-label="Добавить"></button>
+          <button
+            type="button"
+            class="profile__add-button"
+            aria-label="Добавить"
+          ></button>
         </section>
 
         <section class="elements">
@@ -41,7 +49,11 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Карачаево-Черкессия</h2>
-                <button class="elements__heart" aria-label="Нравится"></button>
+                <button
+                  type="button"
+                  class="elements__heart"
+                  aria-label="Нравится"
+                ></button>
               </div>
             </li>
             <li class="elements__element">
@@ -52,7 +64,11 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Гора Эльбрус</h2>
-                <button class="elements__heart" aria-label="Нравится"></button>
+                <button
+                  type="button"
+                  class="elements__heart"
+                  aria-label="Нравится"
+                ></button>
               </div>
             </li>
             <li class="elements__element">
@@ -63,7 +79,11 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Домбай</h2>
-                <button class="elements__heart" aria-label="Нравится"></button>
+                <button
+                  type="button"
+                  class="elements__heart"
+                  aria-label="Нравится"
+                ></button>
               </div>
             </li>
             <li class="elements__element">
@@ -74,7 +94,11 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Кижи</h2>
-                <button class="elements__heart" aria-label="Нравится"></button>
+                <button
+                  type="button"
+                  class="elements__heart"
+                  aria-label="Нравится"
+                ></button>
               </div>
             </li>
             <li class="elements__element">
@@ -85,7 +109,11 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Шиханы Башкирии</h2>
-                <button class="elements__heart" aria-label="Нравится"></button>
+                <button
+                  type="button"
+                  class="elements__heart"
+                  aria-label="Нравится"
+                ></button>
               </div>
             </li>
             <li class="elements__element">
@@ -96,7 +124,11 @@
               />
               <div class="elements__caption">
                 <h2 class="elements__title">Долина гейзеров на Камчатке</h2>
-                <button class="elements__heart" aria-label="Нравится"></button>
+                <button
+                  type="button"
+                  class="elements__heart"
+                  aria-label="Нравится"
+                ></button>
               </div>
             </li>
           </ul>
@@ -106,33 +138,44 @@
       <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
       </footer>
-    
-    <div class="popup">
-      <div class="popup__container">
-        <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
-        <form class="popup__form" name="editprofile">
-        <h2 class="popup__title">Редактировать профиль</h2>
-          <input
-            type="text"
-            value="text"
-            class="popup__input-form"
-            name="name"
-            required placeholder="Имя"
-          />
-          <input
-            type="text"
-            value="text"
-            class="popup__input-form"
-            name="profession"
-            required placeholder="Профессия"
-          />
-          <button type="submit" class="popup__save-button" aria-label="Сохранить">Сохранить</button>
-        </form>
+
+      <div class="popup">
+        <div class="popup__container">
+          <button
+            type="button"
+            class="popup__close-button"
+            aria-label="Закрыть"
+          ></button>
+          <form class="popup__form" name="editprofile">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <input
+              type="text"
+              value="text"
+              class="popup__input-form"
+              name="name"
+              required
+              placeholder="Имя"
+            />
+            <input
+              type="text"
+              value="text"
+              class="popup__input-form"
+              name="profession"
+              required
+              placeholder="Профессия"
+            />
+            <button
+              type="submit"
+              class="popup__save-button"
+              aria-label="Сохранить"
+            >
+              Сохранить
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
-  </div>
-
-  <script src="./scripts/index.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

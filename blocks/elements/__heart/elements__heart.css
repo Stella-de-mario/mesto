@@ -10,6 +10,7 @@
   background-position: center;
   transition: opacity 0.2s linear;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .elements__heart:hover {

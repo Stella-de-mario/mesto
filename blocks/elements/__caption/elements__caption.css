@@ -1,9 +1,9 @@
 .elements__caption {
-    color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:flex-end;
-    width: 242px;
-    margin-bottom: 25px;
-  }
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 242px;
+  margin-bottom: 25px;
+}

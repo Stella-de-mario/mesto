@@ -1,14 +1,12 @@
 .profile__info {
-    display: flex;
-    gap: 30px;
-  }
+  display: flex;
+  gap: 30px;
+}
 
-  @media screen and (max-width: 968px) {
-    .profile__info {
-      gap: 26px;
-      align-items: center;
-      flex-direction: column;
+@media screen and (max-width: 968px) {
+  .profile__info {
+    gap: 26px;
+    align-items: center;
+    flex-direction: column;
   }
- }
-    
-
+}
