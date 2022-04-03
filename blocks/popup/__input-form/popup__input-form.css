@@ -1,17 +1,17 @@
 .popup__input-form {
-    width: 100%;
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
-    box-sizing: border-box;
-    font-size: 14px;
-    line-height: 1.21;
-    color: #000000;
-    margin-top: 23px;
-    padding: 8px 0;
+  width: 100%;
+  font-weight: 400;
+  border: 0;
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #000000;
+  margin-top: 23px;
+  padding: 8px 0;
 }
-  
-  .popup__input-form:focus {
-    outline: none;
-    border-bottom: 1px solid rgb(31, 31, 202);
-  }
+
+.popup__input-form:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(31, 31, 202);
+}
