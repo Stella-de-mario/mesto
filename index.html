@@ -39,98 +39,8 @@
           ></button>
         </section>
 
-        <section class="elements">
-          <ul class="elements__album">
-            <li class="elements__element">
-              <img
-                class="elements__image"
-                src="./image/karachaev.png"
-                alt="Древняя церковь."
-              />
-              <div class="elements__caption">
-                <h2 class="elements__title">Карачаево-Черкессия</h2>
-                <button
-                  type="button"
-                  class="elements__heart"
-                  aria-label="Нравится"
-                ></button>
-              </div>
-            </li>
-            <li class="elements__element">
-              <img
-                class="elements__image"
-                src="./image/elbrus.png"
-                alt="Гора Эльбрус в дымке."
-              />
-              <div class="elements__caption">
-                <h2 class="elements__title">Гора Эльбрус</h2>
-                <button
-                  type="button"
-                  class="elements__heart"
-                  aria-label="Нравится"
-                ></button>
-              </div>
-            </li>
-            <li class="elements__element">
-              <img
-                class="elements__image"
-                src="./image/dombai.png"
-                alt="Лес на фоне гор Домбая."
-              />
-              <div class="elements__caption">
-                <h2 class="elements__title">Домбай</h2>
-                <button
-                  type="button"
-                  class="elements__heart"
-                  aria-label="Нравится"
-                ></button>
-              </div>
-            </li>
-            <li class="elements__element">
-              <img
-                class="elements__image"
-                src="./image/kizhi.jpg"
-                alt="Деревянные церкви."
-              />
-              <div class="elements__caption">
-                <h2 class="elements__title">Кижи</h2>
-                <button
-                  type="button"
-                  class="elements__heart"
-                  aria-label="Нравится"
-                ></button>
-              </div>
-            </li>
-            <li class="elements__element">
-              <img
-                class="elements__image"
-                src="./image/bashkir-shikhany.jpg"
-                alt="Горы на фоне неба."
-              />
-              <div class="elements__caption">
-                <h2 class="elements__title">Шиханы Башкирии</h2>
-                <button
-                  type="button"
-                  class="elements__heart"
-                  aria-label="Нравится"
-                ></button>
-              </div>
-            </li>
-            <li class="elements__element">
-              <img
-                class="elements__image"
-                src="./image/dolina-gejzerov-na-kamchatke.jpg"
-                alt="Гейзеры."
-              />
-              <div class="elements__caption">
-                <h2 class="elements__title">Долина гейзеров на Камчатке</h2>
-                <button
-                  type="button"
-                  class="elements__heart"
-                  aria-label="Нравится"
-                ></button>
-              </div>
-            </li>
+        <section class="cards">
+          <ul class="cards__list">
           </ul>
         </section>
       </main>
@@ -139,7 +49,7 @@
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
       </footer>
 
-      <div class="popup">
+      <div class="popup popup_edit_item">
         <div class="popup__container">
           <button
             type="button"
@@ -150,16 +60,14 @@
             <h2 class="popup__title">Редактировать профиль</h2>
             <input
               type="text"
-              value="text"
-              class="popup__input-form"
+              class="popup__input-form popup__input-name"
               name="name"
               required
               placeholder="Имя"
             />
             <input
               type="text"
-              value="text"
-              class="popup__input-form"
+              class="popup__input-form popup__input-profession"
               name="profession"
               required
               placeholder="Профессия"
@@ -175,7 +83,67 @@
         </div>
       </div>
     </div>
+    
+    <div class="popup popup_add_item">
+      <div class="popup__container">
+        <button
+            type="button"
+            class="popup__close-button"
+            aria-label="Закрыть"
+          ></button>
+          <form class="popup__form popup__form_add-card" name="addcard">
+            <h2 class="popup__title">Новое место</h2>
+            <input
+              type="text"
+              class="popup__input-form popup__input-card"
+              name="card-name"
+              required
+              placeholder="Название"
+            />
+            <input
+              type="url"
+              class="popup__input-form popup__input-link"
+              name="card-link"
+              required
+              placeholder="Ссылка на картинку"
+            />
+            <button
+              type="submit"
+              class="popup__save-button"
+              aria-label="Сохранить"
+            >
+              Сохранить
+            </button>
+          </form>
+         </div> 
+      </div>
 
+      <div class="popup popup_preview-image">
+        <div class="popup__container popup__container-image">
+          <button
+          type="button"
+          class="popup__close-button"
+          aria-label="Закрыть"
+        ></button>
+          <img class="popup__image" src="#" alt="Фотография">
+          <h2 class="popup__image-text"></h2>
+        </div>
+      </div>
+  
+    </div>
+     
+    <template id="card-template">
+      <li class="card">
+        <button class="card__delete-button" type="button" aria-label="Удалить"></button>
+        <img class="card__image" src="#" alt="Фотография">
+        <div class="card__caption">
+          <h2 class="card__title"></h2>
+          <button class="card__heart" type="button" aria-label="Нравится"></button>
+          </div>
+      </li>
+    </template>
+
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

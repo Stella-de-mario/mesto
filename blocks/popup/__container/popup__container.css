@@ -1,9 +1,11 @@
 .popup__container {
-  position: relative;
+  position: absolute;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   max-width: 430px;
   width: 100%;
   background-color: #ffffff;
@@ -18,5 +20,6 @@
   .popup__container {
     padding: 25px 22px;
     max-width: 282px;
+    background-size: contain;
   }
 }
