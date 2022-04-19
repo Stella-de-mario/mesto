@@ -7,6 +7,7 @@
     width: 282px;
     background-color: #ffff;
     border-radius: 10px;
+    position: relative;
   }
   
   @media screen and (min-width: 1000px) {
