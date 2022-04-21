@@ -29,30 +29,6 @@ const professionInput = popupEditItem.querySelector("input[name=profession]");
 const cardInput = popupAddItem.querySelector("#card-name");
 const linkInput = popupAddItem.querySelector("#card-link");
 
-function getCardItem(element) {
-  const cardItem = cardTemplate.content.cloneNode(true);
-  const cardImage = cardItem.querySelector(".card__image");
-  const cardTitle = cardItem.querySelector(".card__title");
-  const likeBtn = cardItem.querySelector(".card__heart");
-  const deleteBtn = cardItem.querySelector(".card__delete-button");
-
-  cardImage.src = element.link;
-  cardImage.alt = element.name;
-  cardTitle.textContent = element.name;
-
-  likeBtn.addEventListener("click", (evt) => {
-    evt.target.classList.toggle("card__heart_active");
-  });
-  deleteBtn.addEventListener("click", (evt) => {
-    const card = evt.target.closest(".card");
-    card.remove();
-  });
-  cardImage.addEventListener("click", () => {
-    showCardImage(element);
-  });
-  return cardItem;
-}
-
 function openedPopup(element) {
   element.classList.add("popup_opened");
 }
@@ -98,6 +74,30 @@ popupFormNewCard.addEventListener("submit", (evt) => {
 closeAddBtn.addEventListener("click", function () {
   closePopup(popupAddItem);
 });
+
+function getCardItem(element) {
+  const cardItem = cardTemplate.content.cloneNode(true);
+  const cardImage = cardItem.querySelector(".card__image");
+  const cardTitle = cardItem.querySelector(".card__title");
+  const likeBtn = cardItem.querySelector(".card__heart");
+  const deleteBtn = cardItem.querySelector(".card__delete-button");
+
+  cardImage.src = element.link;
+  cardImage.alt = element.name;
+  cardTitle.textContent = element.name;
+
+  likeBtn.addEventListener("click", (evt) => {
+    evt.target.classList.toggle("card__heart_active");
+  });
+  deleteBtn.addEventListener("click", (evt) => {
+    const card = evt.target.closest(".card");
+    card.remove();
+  });
+  cardImage.addEventListener("click", () => {
+    showCardImage(element);
+  });
+  return cardItem;
+}
 
 function showCardImage(popupShowCard) {
   openedPopup(popupPreviewImage);
