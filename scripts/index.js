@@ -83,7 +83,7 @@ addBtn.addEventListener("click", function () {
 
 popupFormNewCard.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  cardsArrray(
+  addInCardsList(
     {
       name: popupFormCardName.value,
       link: popupFormCardLink.value,
@@ -110,16 +110,14 @@ closePreviewImageBtn.addEventListener("click", () => {
   closePopup(popupPreviewImage);
 });
 
+function addInCardsList(cardItem, cardAdd, cardNew) {
+  const card = getCardItem(cardItem);
+  if (cardNew) {
+    cardAdd.prepend(card);
+  }
+}
 function renderCard() {
   const html = initialCards.map(getCardItem);
   сardsList.prepend(...html);
-}
-renderCard();
-
-function cardsArrray(cardItem, cardAdd, cardNew) {
-  const item = getCardItem(cardItem);
-  if (cardNew) {
-    cardAdd.prepend(item);
-  }
 }
 renderCard();

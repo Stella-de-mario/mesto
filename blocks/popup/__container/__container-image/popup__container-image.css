@@ -1,11 +1,15 @@
 .popup__container-image {
-    color: white;
-    position: absolute;
-    display: flex;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    align-self: center;
-    justify-content: center;
-    transition: opacity 0.2s linear;
-  }
+  color: white;
+  position: relative;
+  display: flex;
+  max-width: 75vw;
+  max-height: 75vh;
+  width: auto;
+  flex-direction: row;
+  border-radius: 0;
+  box-sizing: border-box;
+  /* align-self: center; */
+  /* justify-content: center; */
+  transition: opacity 0.2s linear;
+  padding: 0;
+}

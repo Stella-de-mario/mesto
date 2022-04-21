@@ -8,137 +8,141 @@
     <title>Сервис Mesto</title>
   </head>
 
-  <body>
-    <div class="page">
-      <header class="header">
-        <img src="./image/logo.svg" alt="Логотип Mesto" class="header__logo" />
-      </header>
+  <body class="page">
+    <header class="header">
+      <img src="./image/logo.svg" alt="Логотип Mesto" class="header__logo" />
+    </header>
 
-      <main class="content">
-        <section class="profile">
-          <div class="profile__info">
-            <img
-              src="./image/Jak.jpg"
-              alt="Жак-Ив Кусто"
-              class="profile__avatar"
-            />
-            <div class="profile__title">
-              <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button
-                type="button"
-                class="profile__edit-button"
-                aria-label="Изменить"
-              ></button>
-              <p class="profile__profession">Исследователь океана</p>
-            </div>
-          </div>
-          <button
-            type="button"
-            class="profile__add-button"
-            aria-label="Добавить"
-          ></button>
-        </section>
-
-        <section class="cards">
-          <ul class="cards__list">
-          </ul>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
-      </footer>
-
-      <div class="popup popup_edit_item">
-        <div class="popup__container">
-          <button
-            type="button"
-            class="popup__close-button"
-            aria-label="Закрыть"
-          ></button>
-          <form class="popup__form" name="editprofile">
-            <h2 class="popup__title">Редактировать профиль</h2>
-            <input
-              type="text"
-              class="popup__input-form popup__input-name"
-              name="name"
-              required
-              placeholder="Имя"
-            />
-            <input
-              type="text"
-              class="popup__input-form popup__input-profession"
-              name="profession"
-              required
-              placeholder="Профессия"
-            />
+    <main class="content">
+      <section class="profile">
+        <div class="profile__info">
+          <img
+            src="./image/Jak.jpg"
+            alt="Жак-Ив Кусто"
+            class="profile__avatar"
+          />
+          <div class="profile__title">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
             <button
-              type="submit"
-              class="popup__save-button"
-              aria-label="Сохранить"
-            >
-              Сохранить
-            </button>
-          </form>
+              type="button"
+              class="profile__edit-button"
+              aria-label="Изменить"
+            ></button>
+            <p class="profile__profession">Исследователь океана</p>
+          </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="popup popup_add_item">
+        <button
+          type="button"
+          class="profile__add-button"
+          aria-label="Добавить"
+        ></button>
+      </section>
+
+      <section class="cards">
+        <ul class="cards__list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+    </footer>
+
+    <div class="popup popup_edit_item">
       <div class="popup__container">
         <button
-            type="button"
-            class="popup__close-button"
-            aria-label="Закрыть"
-          ></button>
-          <form class="popup__form popup__form_add-card" name="addcard">
-            <h2 class="popup__title">Новое место</h2>
-            <input
-              type="text"
-              class="popup__input-form popup__input-card"
-              name="card-name"
-              required
-              placeholder="Название"
-            />
-            <input
-              type="url"
-              class="popup__input-form popup__input-link"
-              name="card-link"
-              required
-              placeholder="Ссылка на картинку"
-            />
-            <button
-              type="submit"
-              class="popup__save-button"
-              aria-label="Сохранить"
-            >
-              Сохранить
-            </button>
-          </form>
-         </div> 
-      </div>
-
-      <div class="popup popup_preview-image">
-        <div class="popup__container popup__container-image">
-          <button
           type="button"
           class="popup__close-button"
           aria-label="Закрыть"
         ></button>
-          <img class="popup__image" src="#" alt="Фотография">
-          <h2 class="popup__image-text"></h2>
-        </div>
+        <form class="popup__form" name="editprofile">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <input
+            type="text"
+            class="popup__input-form popup__input-name"
+            name="name"
+            required
+            placeholder="Имя"
+          />
+          <input
+            type="text"
+            class="popup__input-form popup__input-profession"
+            name="profession"
+            required
+            placeholder="Профессия"
+          />
+          <button
+            type="submit"
+            class="popup__save-button"
+            aria-label="Сохранить"
+          >
+            Сохранить
+          </button>
+        </form>
       </div>
-  
-  
+    </div>
+
+    <div class="popup popup_add_item">
+      <div class="popup__container">
+        <button
+          type="button"
+          class="popup__close-button"
+          aria-label="Закрыть"
+        ></button>
+        <form class="popup__form popup__form_add-card" name="addcard">
+          <h2 class="popup__title">Новое место</h2>
+          <input
+            type="text"
+            class="popup__input-form popup__input-card"
+            name="card-name"
+            required
+            placeholder="Название"
+          />
+          <input
+            type="url"
+            class="popup__input-form popup__input-link"
+            name="card-link"
+            required
+            placeholder="Ссылка на картинку"
+          />
+          <button
+            type="submit"
+            class="popup__save-button"
+            aria-label="Сохранить"
+          >
+            Сохранить
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_preview-image">
+      <div class="popup__container popup__container-image">
+        <button
+          type="button"
+          class="popup__close-button"
+          aria-label="Закрыть"
+        ></button>
+        <img class="popup__image" src="#" alt="Фотография" />
+        <h2 class="popup__image-text"></h2>
+      </div>
+    </div>
+
     <template id="card-template">
       <li class="card">
-        <button class="card__delete-button" type="button" aria-label="Удалить"></button>
-        <img class="card__image" src="#" alt="Фотография">
+        <button
+          class="card__delete-button"
+          type="button"
+          aria-label="Удалить"
+        ></button>
+        <img class="card__image" src="#" alt="Фотография" />
         <div class="card__caption">
           <h2 class="card__title"></h2>
-          <button class="card__heart" type="button" aria-label="Нравится"></button>
-          </div>
+          <button
+            class="card__heart"
+            type="button"
+            aria-label="Нравится"
+          ></button>
+        </div>
       </li>
     </template>
 
