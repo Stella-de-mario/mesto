@@ -1,5 +1,5 @@
 .popup__container-image {
-  color: white;
+  color: #ffff;
   position: relative;
   display: flex;
   max-width: 75vw;
@@ -8,8 +8,6 @@
   flex-direction: row;
   border-radius: 0;
   box-sizing: border-box;
-  /* align-self: center; */
-  /* justify-content: center; */
   transition: opacity 0.2s linear;
   padding: 0;
 }
