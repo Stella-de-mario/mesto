@@ -47,29 +47,45 @@
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
 
-    <div class="popup popup_edit_item">
+    <div class="popup popup_edit-item">
       <div class="popup__container">
         <button
           type="button"
           class="popup__close-button"
           aria-label="Закрыть"
         ></button>
-        <form class="popup__form" name="editprofile">
+        <form
+          class="popup__form popup__form_edit"
+          name="editprofile"
+          novalidate
+        >
           <h2 class="popup__title">Редактировать профиль</h2>
-          <input
-            type="text"
-            class="popup__input-form popup__input-name"
-            name="name"
-            required
-            placeholder="Имя"
-          />
-          <input
-            type="text"
-            class="popup__input-form popup__input-profession"
-            name="profession"
-            required
-            placeholder="Профессия"
-          />
+          <label class="popup__field">
+            <input
+              type="text"
+              class="popup__input popup__input-name"
+              name="name"
+              minlength="2"
+              maxlength="40"
+              id="profile-name"
+              required
+              placeholder="Имя"
+            />
+            <span class="popup__error" id="profile-name-error"></span>
+          </label>
+          <label class="popup__field">
+            <input
+              type="text"
+              class="popup__input popup__input-profession"
+              name="profession"
+              minlength="2"
+              maxlength="200"
+              id="profile-profession"
+              required
+              placeholder="Профессия"
+            />
+            <span class="popup__error" id="profile-profession-error"></span>
+          </label>
           <button
             type="submit"
             class="popup__save-button"
@@ -81,29 +97,39 @@
       </div>
     </div>
 
-    <div class="popup popup_add_item">
+    <div class="popup popup_add-item">
       <div class="popup__container">
         <button
           type="button"
           class="popup__close-button"
           aria-label="Закрыть"
         ></button>
-        <form class="popup__form popup__form_add-card" name="addcard">
+        <form class="popup__form popup__form_add" name="addcard" novalidate>
           <h2 class="popup__title">Новое место</h2>
-          <input
-            type="text"
-            class="popup__input-form popup__input-card"
-            name="card-name"
-            required
-            placeholder="Название"
-          />
-          <input
-            type="url"
-            class="popup__input-form popup__input-link"
-            name="card-link"
-            required
-            placeholder="Ссылка на картинку"
-          />
+          <label class="popup__field">
+            <input
+              type="text"
+              class="popup__input popup__input-card"
+              name="card-name"
+              id="card-name"
+              minlength="2"
+              maxlength="30"
+              required
+              placeholder="Название"
+            />
+            <span class="popup__error" id="card-name-error"></span>
+          </label>
+          <label class="popup__field">
+            <input
+              type="url"
+              class="popup__input popup__input-link"
+              name="card-link"
+              id="card-link"
+              required
+              placeholder="Ссылка на картинку"
+            />
+            <span class="popup__error" id="card-link-error"></span>
+          </label>
           <button
             type="submit"
             class="popup__save-button"
@@ -148,5 +174,6 @@
 
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

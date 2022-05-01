@@ -6,7 +6,8 @@
   width: 22px;
   align-self: center;
   justify-self: end;
-  background-image: url(../../../image/heart.svg);
+  flex-shrink: 0;
+  background: transparent url(../../../image/heart.svg) no-repeat center;
   transition: opacity 0.2s linear;
   cursor: pointer;
 }
