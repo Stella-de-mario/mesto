@@ -7,6 +7,30 @@ const dataValidation = {
   errorClass: "popup__error_visible",
 };
 
+function enableValidation(config) {
+  const forms = document.querySelectorAll(config.formSelector);
+
+  forms.forEach((form) => {
+    const button = form.querySelector(config.submitButtonSelector);
+    const inactiveButton = config.inactiveButtonClass;
+
+    form.addEventListener("input", (event) => {
+      handleFormInput(event.target, form, config);
+      toggleButton(form, button, inactiveButton);
+    });
+
+    toggleButton(form, button, inactiveButton);
+  });
+}
+
+function handleFormInput(input, form, config) {
+  if (!input.validity.valid) {
+    showInputError(input, config);
+  } else {
+    hideInputError(input, config);
+  }
+}
+
 const showInputError = (input, config) => {
   const errorNode = document.querySelector(`#${input.id}-error`);
   errorNode.classList.add(config.errorClass);
@@ -21,37 +45,18 @@ const hideInputError = (input, config) => {
   input.classList.remove(config.inputErrorClass);
 };
 
-function enableValidation(config) {
-  const forms = document.querySelectorAll(config.formSelector);
-  forms.forEach((form) => {
-    form.addEventListener("input", (evt) => {
-      handleFormInput(evt.target, form, config);
-    });
-    toggleButton(form, config);
-  });
-}
-
-function handleFormInput(input, form, config) {
-  if (!input.validity.valid) {
-    showInputError(input, config);
-  } else {
-    hideInputError(input, config);
-  }
-  toggleButton(form, config);
-}
-
-function toggleButton(form, config) {
-  const button = form.querySelector(config.submitButtonSelector);
+function toggleButton(form, button, config) {
   button.disabled = !form.checkValidity();
   button.classList.toggle(config.inactiveButtonClass, !form.checkValidity());
 }
 
 function resetInputValidity(form, config) {
-  const inputs = form.querySelectorAll(config.inputSelector);
+  const button = form.querySelector(dataValidation.submitButtonSelector);
+  const inputs = form.querySelectorAll(dataValidation.inputSelector);
   inputs.forEach((input) => {
     hideInputError(input, config);
   });
-  toggleButton(form, config);
+  toggleButton(form, button, config);
 }
 
 enableValidation(dataValidation);
