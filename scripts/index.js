@@ -18,7 +18,7 @@ const profileName = document.querySelector(".profile__name");
 const profileProfession = document.querySelector(".profile__profession");
 const cardsContainer = document.querySelector(".cards__list");
 const popups = Array.from(document.querySelectorAll(".popup"));
-const inputs = Array.from(document.querySelectorAll('.popup__input'));
+const inputs = Array.from(document.querySelectorAll(".popup__input"));
 
 function setProfileInput() {
   nameInput.value = profileName.textContent;
@@ -50,24 +50,23 @@ function closePopup(element) {
   document.removeEventListener("keydown", closeOnEsc);
 }
 
-
 popups.forEach((element) => {
-    element.addEventListener('mousedown', (evt) => {
-        if (evt.target.classList.contains('popup_opened')) {
-            closePopup(element)
-        }
-        if (evt.target.classList.contains('popup__close-button')) {
-          closePopup(element)
-        }
-    })
-})
+  element.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("popup_opened")) {
+      closePopup(element);
+    }
+    if (evt.target.classList.contains("popup__close-button")) {
+      closePopup(element);
+    }
+  });
+});
 
-function closeOnEsc(evt) { 
-  if (evt.key === "Escape") { 
-    const openPopupElement = document.querySelector(".popup_opened"); 
-    closePopup(openPopupElement); 
-  } 
-} 
+function closeOnEsc(evt) {
+  if (evt.key === "Escape") {
+    const openPopupElement = document.querySelector(".popup_opened");
+    closePopup(openPopupElement);
+  }
+}
 
 function activeLikeBtn(evt) {
   evt.target.classList.toggle("card__heart_active");
