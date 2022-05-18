@@ -16,10 +16,10 @@
   opacity: 0.5;
 }
 
-.card__heart:active { 
-  background-image: url(../../../image/heart-active.svg); 
-  opacity: 1; 
-} 
+.card__heart:active {
+  background-image: url(../../../image/heart-active.svg);
+  opacity: 1;
+}
 
 @media screen and (max-width: 450px) {
   .card__heart {
