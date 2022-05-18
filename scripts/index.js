@@ -4,8 +4,7 @@ import { initialCards } from "./image.js";
 
 const btnEdit = document.querySelector(".profile__edit-button");
 const btnAdd = document.querySelector(".profile__add-button");
-const popups = Array.from(document.querySelectorAll(".popup"));
-const popupFormEdit = document.querySelector(".popup__form_edit");
+const popups = document.querySelectorAll(".popup");
 const popupFormAdd = document.querySelector(".popup__form_add");
 const popupElementEdit = document.querySelector(".popup_edit-item");
 const popupElementAdd = document.querySelector(".popup_add-item");
@@ -42,13 +41,13 @@ cardFormValidator.enableValidation();
 profileFormValidator.enableValidation();
 
 function getCardElement(cardImage) {
-  const cardElement = new Card(cardImage, ".card-template", showCardImage);
+  const cardElement = new Card(cardImage, '.card-template', showCardImage);
   return cardElement.createCard();
 }
 
-initialCards.forEach((element) => {
-  cardsContainer.append(getCardElement(element));
-});
+initialCards.forEach(function (element) { 
+  cardsContainer.append(getCardElement(element)); 
+}); 
 
 function setProfileInput() {
   nameInput.value = profileName.textContent;
@@ -111,11 +110,11 @@ function showCardImage(name, link) {
 
 function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
-  const cardObject = {
+  const cardNewObject = {
     name: cardInput.value,
     link: linkInput.value,
   };
-  cardsContainer.prepend(getCardElement(cardObject));
+  cardsContainer.prepend(getCardElement(cardNewObject));
   closePopup(popupElementAdd);
 }
 

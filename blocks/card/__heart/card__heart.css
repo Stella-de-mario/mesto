@@ -1,24 +1,19 @@
 .card__heart {
   padding: 0;
   border: none;
-  background-color: #ffff;
   height: 19px;
   width: 22px;
-  align-self: center;
-  justify-self: end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffff;
   flex-shrink: 0;
-  background: transparent url(../../../image/heart.svg) no-repeat center;
+  background-image: url(../../../image/heart.svg);
   transition: opacity 0.2s linear;
   cursor: pointer;
 }
 
 .card__heart:hover {
   opacity: 0.5;
-}
-
-.card__heart:active {
-  background-image: url(../../../image/heart-active.svg);
-  opacity: 1;
 }
 
 @media screen and (max-width: 450px) {

@@ -1,29 +1,31 @@
 export class Card {
-  constructor(card, cardSelector, clickToCard) {
+  constructor(card, cardTemplate, handleOpenCard) {
     this._name = card.name;
     this._link = card.link;
-    this._cardSelector = cardSelector;
-    this._clickToCard = clickToCard;
+    this._cardTemplate = cardTemplate;
+    this._handleOpenCard = handleOpenCard;
   }
 
   _getTemplate() {
-    const cardTemplate = document
-      .querySelector(this._cardSelector)
+    const cardElement = document
+      .querySelector(this._cardTemplate)
       .content.querySelector(".card")
       .cloneNode(true);
-    return cardTemplate;
+      
+    return cardElement;
   }
 
   createCard() {
     this._element = this._getTemplate();
-    this._cardImage = this._element.querySelector(".card__image");
+
+    this._cardImage = this._element.querySelector('.card__image');
+    this._cardTitle = this._element.querySelector('.card__title'); 
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
+    this._cardTitle.textContent = this._name;
 
     this._setEventListeners();
-
-    this._cardImage.scr = this._link;
-    this._cardImage.alt = this._name;
-    this._element.querySelector(".card__title").textContent = this._name;
-
+    
     return this._element;
   }
 
@@ -39,7 +41,7 @@ export class Card {
     });
 
     this._cardImage.addEventListener("click", () => {
-      this._clickToCard(this._name, this._link);
+      this._handleOpenCard(this._name, this._link);
     });
   }
 
