@@ -79,7 +79,7 @@ function closePopup(element) {
   document.removeEventListener("keydown", closeOnEsc);
 }
 
-function closeOnOverlay(evt, element) {
+function handlePopupClose(evt, element) {
   if (
     evt.target === evt.currentTarget ||
     evt.target.classList.contains("popup__close-button")
@@ -97,7 +97,7 @@ function closeOnEsc(evt) {
 
 popups.forEach(function (element) {
   element.addEventListener("mousedown", function (evt) {
-    closeOnOverlay(evt, element);
+    handlePopupClose(evt, element);
   });
 });
 

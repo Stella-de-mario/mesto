@@ -32,12 +32,12 @@ export class Card {
   _setEventListeners() {
     this._btnDelete = this._element.querySelector(".card__delete-button");
     this._btnDelete.addEventListener("click", () => {
-      this._deleteCardBtn();
+      this._deleteCard();
     });
 
     this._btnLike = this._element.querySelector(".card__heart");
     this._btnLike.addEventListener("click", () => {
-      this._activeLikeBtn(this._btnLike);
+      this._toggleLike(this._btnLike);
     });
 
     this._cardImage.addEventListener("click", () => {
@@ -45,12 +45,12 @@ export class Card {
     });
   }
 
-  _deleteCardBtn() {
+  _deleteCard() {
     this._element.remove();
     this._element = null;
   }
 
-  _activeLikeBtn() {
+  _toggleLike() {
     this._btnLike.classList.toggle("card__heart_active");
   }
 }
