@@ -7,7 +7,7 @@
   background-position: center;
   background-color: #ffff;
   flex-shrink: 0;
-  background-image: url(../../../image/heart.svg);
+  background-image: url(../../../../src/image/heart.svg);
   transition: opacity 0.2s linear;
   cursor: pointer;
 }
@@ -17,7 +17,7 @@
 }
 
 .card__heart:active {
-  background-image: url(../../../image/heart-active.svg);
+  background-image: url(../../../../src/image/heart-active.svg);
   opacity: 1;
 }
 

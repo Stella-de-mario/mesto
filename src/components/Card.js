@@ -1,9 +1,9 @@
-export class Card {
-  constructor(card, cardTemplate, handleOpenCard) {
+export default class Card {
+  constructor(card, cardTemplate, handleCardClick) {
     this._name = card.name;
     this._link = card.link;
     this._cardTemplate = cardTemplate;
-    this._handleOpenCard = handleOpenCard;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -11,21 +11,22 @@ export class Card {
       .querySelector(this._cardTemplate)
       .content.querySelector(".card")
       .cloneNode(true);
-      
+
     return cardElement;
   }
 
   createCard() {
     this._element = this._getTemplate();
 
-    this._cardImage = this._element.querySelector('.card__image');
-    this._cardTitle = this._element.querySelector('.card__title'); 
+    this._cardImage = this._element.querySelector(".card__image");
+    this._cardTitle = this._element.querySelector(".card__title");
+
+    this._setEventListeners();
+
     this._cardImage.src = this._link;
     this._cardImage.alt = this._name;
     this._cardTitle.textContent = this._name;
 
-    this._setEventListeners();
-    
     return this._element;
   }
 
@@ -37,11 +38,11 @@ export class Card {
 
     this._btnLike = this._element.querySelector(".card__heart");
     this._btnLike.addEventListener("click", () => {
-      this._toggleLike(this._btnLike);
+      this._toggleLike();
     });
 
     this._cardImage.addEventListener("click", () => {
-      this._handleOpenCard(this._name, this._link);
+      this._handleCardClick();
     });
   }
 

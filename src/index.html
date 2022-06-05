@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <title>Сервис Mesto</title>
   </head>
 
   <body class="page">
     <header class="header">
-      <img src="./image/logo.svg" alt="Логотип Mesto" class="header__logo" />
+      <img
+        src="<%=require('../src/image/logo.svg')%>"
+        alt="Логотип Mesto"
+        class="header__logo"
+      />
     </header>
 
     <main class="content">
       <section class="profile">
         <div class="profile__info">
           <img
-            src="./image/Jak.jpg"
+            src="<%=require('../src/image/Jak.jpg')%>"
             alt="Жак-Ив Кусто"
             class="profile__avatar"
           />
@@ -110,7 +113,7 @@
             <input
               type="text"
               class="popup__input popup__input-card"
-              name="card-name"
+              name="name"
               id="card-name"
               minlength="2"
               maxlength="30"
@@ -123,7 +126,7 @@
             <input
               type="url"
               class="popup__input popup__input-link"
-              name="card-link"
+              name="link"
               id="card-link"
               required
               placeholder="Ссылка на картинку"
@@ -171,7 +174,5 @@
         </div>
       </li>
     </template>
-
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

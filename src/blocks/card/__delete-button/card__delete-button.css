@@ -3,7 +3,7 @@
   right: 20px;
   top: 20px;
   border: none;
-  background: transparent url(../../../image/delete-button.svg) no-repeat center;
+  background: transparent url(../../../../src/image/delete-button.svg) no-repeat center;
   background-color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
