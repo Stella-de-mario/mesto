@@ -17,7 +17,8 @@ export default class Card {
 
   createCard() {
     this._element = this._getTemplate();
-
+    this._btnDelete = this._element.querySelector(".card__delete-button");
+    this._btnLike = this._element.querySelector(".card__heart");
     this._cardImage = this._element.querySelector(".card__image");
     this._cardTitle = this._element.querySelector(".card__title");
 
@@ -31,12 +32,11 @@ export default class Card {
   }
 
   _setEventListeners() {
-    this._btnDelete = this._element.querySelector(".card__delete-button");
     this._btnDelete.addEventListener("click", () => {
       this._deleteCard();
     });
 
-    this._btnLike = this._element.querySelector(".card__heart");
+    
     this._btnLike.addEventListener("click", () => {
       this._toggleLike();
     });

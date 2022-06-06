@@ -29,7 +29,7 @@ export default class Popup {
   };
 
   setEventListeners() {
-    document.addEventListener("mousedown", (evt) => {
+    this._popup.addEventListener("mousedown", (evt) => {
       this._handleOverlayOnClose(evt);
     });
   }
