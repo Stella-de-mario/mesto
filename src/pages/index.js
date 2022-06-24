@@ -61,15 +61,27 @@ Promise.all([api.getUserInfo(), api.getCards()])
 
 function getCard(cardInfo) {
   const cardElement = new Card(
-    cardInfo, () => {popupImage.open(cardInfo)}, '.card-template', confirmDelete, handleAddLike,handleDeleteLike)
+    cardInfo, () => {}, '.card-template', handleClickCard,   handleAddLike, confirmDelete, handleDeleteLike)
     console.log(cardElement) 
     
   return cardElement.createCard(user.getUserId());
   }
-   
+
+function handleClickCard(cardInfo) {
+popupImage.open(cardInfo);
+}  
+
 function confirmDelete(card) {
   popupConfirmation.open();
   popupConfirmation.setHandleSubmit(() => handleSubmitDelete(card));
+}
+
+function handleDeleteLike(card) {
+  api.deleteLikeCard(card.getCardId())
+    .then(cardInfo => {
+      card.setLikes(user.getUserId(), cardInfo.likes);
+    })
+    .catch(err => console.log(`Ошибка: ${err}`));
 }
 
 function handleAddLike(card) {
@@ -80,13 +92,7 @@ function handleAddLike(card) {
   .catch(err => console.log(`Ошибка: ${err}`));
 }
 
-function handleDeleteLike(card) {
-  api.deleteLikeCard(card.getCardId())
-    .then(cardInfo => {
-      card.setLikes(user.getUserId(), cardInfo.likes);
-    })
-    .catch(err => console.log(`Ошибка: ${err}`));
-}
+
 
 btnEdit.addEventListener("click", () => {
   profileFormValidator.resetInputValidity();

@@ -41,23 +41,23 @@ export default class Card {
       ".card__heart-counter"
     );
 
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
+    this._cardTitle.textContent = this._name;
+
     this._setEventListeners();
 
     if (this._id !== myId) {
       this._btnDelete.classList.add("card__delete-button-inactive");
     }
-
+    
     this.updateLikes(myId);
 
-    this._cardImage.src = this._link;
-    this._cardImage.alt = this._name;
-    this._cardTitle.textContent = this._name;
-    
     return this._element;
   }
 
   updateLikes(myId) {
-    this._cardLikesCounter.textContent = this.likes.length;
+    this._cardLikesCounter.textContent = this._likes.length;
 
     if (this._likes.find(item => item._id === myId !== undefined)) {
       this._btnLike.classList.add("card__heart_active");
@@ -76,11 +76,9 @@ export default class Card {
     this.updateLikes(userId);
   }
 
-  _setEventListeners() {
-    this._btnDelete.addEventListener("click", () => {
-      this._handleDeleteCard(this);
-    });
 
+  _setEventListeners() {
+    
     this._btnLike.addEventListener("click", () => {
       if(this._btnLike.classList.contains('card__heart_active')) {
         this._handleDeleteLikeCard(this)
@@ -91,6 +89,10 @@ export default class Card {
 
     this._cardImage.addEventListener("click", () => {
       this._handleClickCard();
+    });
+
+    this._btnDelete.addEventListener("click", () => {
+      this._handleDeleteCard(this);
     });
   }
 }
