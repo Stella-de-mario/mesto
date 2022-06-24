@@ -62,7 +62,7 @@ Promise.all([api.getUserInfo(), api.getCards()])
 function getCard(cardInfo) {
   const cardElement = new Card(
     cardInfo, () => {}, '.card-template', handleClickCard,   handleAddLike, confirmDelete, handleDeleteLike)
-    console.log(cardElement) 
+    // console.log(cardElement) 
     
   return cardElement.createCard(user.getUserId());
   }
