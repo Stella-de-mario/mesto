@@ -29,12 +29,13 @@ export default class Api {
   }
 
   setNewUserInfo(data) {
+    console.log(data)
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
         name: data.name,
-        about: data.about,
+        about: data.profession,
       }),
     }).then(this._getResponse);
     
