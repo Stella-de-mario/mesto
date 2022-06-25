@@ -112,7 +112,6 @@ btnEditUserAvatar.addEventListener('click', () => {
 
 function handleAddCard(card) {
   popupAddCard.getLoading(true);
-  console.log(card)
   api.setNewCardsInfo({name: card["name"], link: card["link"]}) 
   .then(cardInfo => {
     cardsContainer.addItem(getCard(cardInfo));
