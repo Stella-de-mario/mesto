@@ -14,7 +14,7 @@ export default class PopupWithConfirmation extends Popup {
         super.setEventListeners();
         this._popupConfirmation = this._popup.querySelector('.popup__save-button_disabled');
         this._popupConfirmation.addEventListener('click', () => {
-          this._handleSubmit(this._deletedCard); 
+          this._handleSubmit(this._deleteCard); 
         }); 
     }
   }  

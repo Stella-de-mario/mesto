@@ -48,7 +48,7 @@ export default class Card {
     this._setEventListeners();
 
     if (this._id !== myId) {
-      this._btnDelete.classList.add("card__delete-button-inactive");
+      this._btnDelete.classList.add("card__delete-button_inactive");
     }
     
     this.updateLikes(myId);
@@ -78,6 +78,10 @@ export default class Card {
 
 
   _setEventListeners() {
+
+    this._cardImage.addEventListener("click", () => {
+      this._handleClickCard(this._name, this._link);
+    });
     
     this._btnLike.addEventListener("click", () => {
       if(this._btnLike.classList.contains('card__heart_active')) {
@@ -85,10 +89,6 @@ export default class Card {
       } else {
       this._handleLikeCard(this);
       }
-    });
-
-    this._cardImage.addEventListener("click", () => {
-      this._handleClickCard();
     });
 
     this._btnDelete.addEventListener("click", () => {

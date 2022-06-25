@@ -112,7 +112,8 @@ btnEditUserAvatar.addEventListener('click', () => {
 
 function handleAddCard(card) {
   popupAddCard.getLoading(true);
-  api.setNewCardsInfo({name: card["card-name"], link: card["card-link"]}) 
+  console.log(card)
+  api.setNewCardsInfo({name: card["name"], link: card["link"]}) 
   .then(cardInfo => {
     cardsContainer.addItem(getCard(cardInfo));
     popupAddCard.close();
@@ -125,7 +126,7 @@ function handleAddCard(card) {
 
 function handleEditProfile(userInfo) {
   popupEditProfile.getLoading(true);
-  api.setNewUserInfo({name: userInfo["profile-name"], about: userInfo["profile-profession"]})
+  api.setNewUserInfo({name: userInfo["name"], about: userInfo["profession"]})
   .then(userInfo => {
     user.setUserInfo(userInfo);
     popupEditProfile.close();
@@ -147,7 +148,8 @@ function handleSubmitDelete(card) {
 
 function handleAddAvatarUser(userAvatar) {
   popupAvatarUser.getLoading(true);
-  api.setUserAvatar({avatar: userAvatar["avatar-link"]})
+  console.log(userAvatar)
+  api.setUserAvatar({avatar: userAvatar["link"]})
   .then(userAvatar => {
     user.setUserInfo(userAvatar);
     popupAvatarUser.close();
