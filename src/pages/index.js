@@ -53,7 +53,7 @@ const popupEditProfile = new PopupWithForm(
 );
 const popupAddCard = new PopupWithForm(".popup_add-item", handleAddCard);
 const popupAvatarUser = new PopupWithForm(
-  ".popup__avatar-form",
+  ".popup_form_avatar",
   handleAddAvatarUser
 );
 const popupImage = new PopupWithImage(".popup_preview-image");

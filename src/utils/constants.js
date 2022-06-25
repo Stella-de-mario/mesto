@@ -7,5 +7,5 @@ export const popupFormElementEdit = popupElementEdit.querySelector(".popup__form
 export const popupFormElementAdd = popupElementAdd.querySelector(".popup__form"); 
 export const profileName = popupElementEdit.querySelector("#profile-name"); 
 export const profileProfession = popupElementEdit.querySelector("#profile-profession"); 
-export const popupElementEditUserAvatar = document.querySelector('.popup__avatar-form');
+export const popupElementEditUserAvatar = document.querySelector('.popup_form_avatar');
 export const popupFormElementEditUserAvatar = popupElementEditUserAvatar.querySelector('.popup__form');
