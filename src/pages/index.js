@@ -148,7 +148,6 @@ function handleSubmitDelete(card) {
 
 function handleAddAvatarUser(userAvatar) {
   popupAvatarUser.getLoading(true);
-  console.log(userAvatar)
   api.setUserAvatar({avatar: userAvatar["link"]})
   .then(userAvatar => {
     user.setUserInfo(userAvatar);

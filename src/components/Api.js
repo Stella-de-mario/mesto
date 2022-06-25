@@ -72,13 +72,12 @@ export default class Api {
     }).then(this._getResponse);
   }
 
-  setUserAvatar(avatar) {
-    console.log(avatar)
+  setUserAvatar(data) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        avatar: link,
+      avatar: data.avatar,
       }),
     }).then(this._getResponse);
   }
