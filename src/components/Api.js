@@ -35,14 +35,13 @@ export default class Api {
       headers: this._headers,
       body: JSON.stringify({
         name: data.name,
-        about: data.profession,
+        about: data.about,
       }),
     }).then(this._getResponse);
     
   }
 
   setNewCardsInfo(card) {
-    console.log(card)
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
@@ -75,7 +74,6 @@ export default class Api {
   }
 
   setUserAvatar(userAvatar) {
-    console.log(userAvatar)
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,

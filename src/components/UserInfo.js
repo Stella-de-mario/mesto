@@ -13,9 +13,9 @@ export default class UserInfo {
     };
   }
 
-  setUserInfo({ name, profession, _id, avatar }) {
+  setUserInfo({ name, about, _id, avatar }) {
     this._profileName.textContent = name;
-    this._profileProfession.textContent = profession;
+    this._profileProfession.textContent = about;
     this._profileAvatar.src = avatar;
     this._profileId = _id;
   }

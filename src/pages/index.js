@@ -147,7 +147,6 @@ function handleAddCard(card) {
 }
 
 function handleEditProfile(userInfo) {
-  console.log(userInfo);
   popupEditProfile.getLoading(true);
   api.setNewUserInfo({ name: userInfo["name"], about: userInfo["profession"] })
     .then((userInfo) => {
