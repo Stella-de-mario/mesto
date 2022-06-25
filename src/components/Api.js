@@ -37,6 +37,7 @@ export default class Api {
         about: data.about,
       }),
     }).then(this._getResponse);
+    
   }
 
   setNewCardsInfo(card) {
@@ -72,12 +73,13 @@ export default class Api {
     }).then(this._getResponse);
   }
 
-  setUserAvatar(data) {
+  setUserAvatar(userAvatar) {
+    console.log(userAvatar)
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-      avatar: data.avatar,
+      avatar: userAvatar.avatar,
       }),
     }).then(this._getResponse);
   }

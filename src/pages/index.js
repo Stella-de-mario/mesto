@@ -40,11 +40,13 @@ cardFormValidator.enableValidation();
 profileFormValidator.enableValidation();
 userAvatarFormValidator.enableValidation();
 
-const popupEditProfile = new PopupWithForm('.popup_edit-item', handleEditProfile);;
+const popupEditProfile = new PopupWithForm('.popup_edit-item', handleEditProfile);
 const popupAddCard = new PopupWithForm('.popup_add-item', handleAddCard);
 const popupAvatarUser = new PopupWithForm('.popup__avatar-form', handleAddAvatarUser);
 const popupImage = new PopupWithImage('.popup_preview-image');
 const popupConfirmation = new PopupWithConfirmation('.popup_card-delete'); 
+
+
 
 popupEditProfile.setEventListeners();
 popupAddCard.setEventListeners();
@@ -146,8 +148,9 @@ function handleSubmitDelete(card) {
 }
 
 function handleAddAvatarUser(userAvatar) {
+  console.log(userAvatar["avatar-link"])
   popupAvatarUser.getLoading(true);
-  api.setUserAvatar({avatar: userAvatar["link"]})
+  api.setUserAvatar({avatar: userAvatar["avatar-link"]})
   .then(userAvatar => {
     user.setUserInfo(userAvatar);
     popupAvatarUser.close();

@@ -20,22 +20,26 @@
       <section class="profile">
         <div class="profile__info">
           <a class="profile__avatar">
-          <img
-            src="/"
-            href="#" alt="Фотография пользователя"
-            class="profile__image"
-          />
-        </a>
+            <img
+              src="/"
+              href="#"
+              alt="Фотография пользователя"
+              class="profile__image"
+            />
+          </a>
           <div class="profile__title">
-            <h1 class="profile__name"></h1>
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+
             <button
               type="button"
               class="profile__edit-button"
               aria-label="Изменить"
             ></button>
-            <p class="profile__profession"></p>
+
+            <p class="profile__profession">Исследователь океана</p>
           </div>
         </div>
+
         <button
           type="button"
           class="profile__add-button"
@@ -150,10 +154,14 @@
       <div class="popup__container">
         <button class="popup__close-button" type="button"></button>
         <h2 class="popup__title popup__title_delete">Вы уверены?</h2>
-        <button class="popup__save-button popup__save-button_disabled" type="button">Да</button>
+        <button
+          class="popup__save-button popup__save-button_disabled"
+          type="button"
+        >
+          Да
+        </button>
       </div>
     </div>
-
 
     <div class="popup popup_preview-image">
       <div class="popup__container-image">
@@ -173,17 +181,23 @@
         <h2 class="popup__title popup__title_type-avatar">Обновить аватар</h2>
         <form class="popup__form popup__avatar-form" name="newUser" novalidate>
           <label class="popup__field">
-            <input 
-            required
-            class="popup__input" 
-            type="url" 
-            id="avatar-link" 
-            name="link"  
-            placeholder="Ссылка на новый аватар"
-            >
+            <input
+              required
+              class="popup__input"
+              type="url"
+              id="avatar-link"
+              name="avatar-link"
+              placeholder="Ссылка на новый аватар"
+            />
             <span class="popup__error" id="avatar-link-error"></span>
           </label>
-          <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+          <button
+            class="popup__save-button"
+            type="submit"
+            aria-label="Сохранить"
+          >
+            Сохранить
+          </button>
         </form>
       </div>
     </div>
@@ -199,13 +213,13 @@
         <div class="card__caption">
           <h2 class="card__title"></h2>
           <div class="card__heart-container">
-          <button
-            class="card__heart"
-            type="button"
-            aria-label="Нравится"
-          ></button>
-          <p class="card__heart-counter"></p>
-        </div>
+            <button
+              class="card__heart"
+              type="button"
+              aria-label="Нравится"
+            ></button>
+            <p class="card__heart-counter"></p>
+          </div>
         </div>
       </li>
     </template>
