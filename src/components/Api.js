@@ -1,10 +1,7 @@
 export default class Api {
-  constructor( baseUrl ) {
+  constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
-    this._headers = {
-      authorization: "08894665-6e9a-4a2c-9b4e-7ef096cc96fb",
-      "Content-Type": "application/json",
-    };
+    this._headers = headers;
   }
 
   _getResponse(res) {
@@ -29,7 +26,7 @@ export default class Api {
   }
 
   setNewUserInfo(data) {
-    console.log(data)
+    console.log(data);
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
@@ -38,7 +35,6 @@ export default class Api {
         about: data.about,
       }),
     }).then(this._getResponse);
-    
   }
 
   setNewCardsInfo(card) {
@@ -78,7 +74,7 @@ export default class Api {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-      avatar: userAvatar.avatar,
+        avatar: userAvatar.avatar,
       }),
     }).then(this._getResponse);
   }

@@ -59,7 +59,7 @@ export default class Card {
   updateLikes(myId) {
     this._cardLikesCounter.textContent = this._likes.length;
 
-    if (this._likes.find(item => item._id === myId !== undefined)) {
+    if (this._likes.find(item => item._id == myId) !== undefined) {
       this._btnLike.classList.add("card__heart_active");
     } else {
       this._btnLike.classList.remove("card__heart_active");

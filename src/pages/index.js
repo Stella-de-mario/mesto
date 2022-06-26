@@ -18,7 +18,13 @@ import Section from "../components/Section.js";
 import UserInfo from "../components/UserInfo.js";
 import Api from "../components/Api.js";
 
-const api = new Api("https://mesto.nomoreparties.co/v1/cohort-43");
+const api = new Api({
+  baseUrl: "https://mesto.nomoreparties.co/v1/cohort-43",
+  headers: {
+    authorization: "08894665-6e9a-4a2c-9b4e-7ef096cc96fb",
+    "Content-Type": "application/json",
+  }
+});
 
 const user = new UserInfo({
   name: ".profile__name",
